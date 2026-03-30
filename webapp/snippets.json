@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Password Reset",
+        "content": "Hi ____,\n\nYour password has been reset.\n    \n    \n    \n    ",
+        "tags": [
+            "account",
+            "user"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Network Reset",
+        "content": "ipconfig /flushdns\nipconfig /release\nipconfig /renew\n    \n    ",
+        "tags": [
+            "network"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Network Reset (Copy)",
+        "content": "ipconfig /flushdns\nipconfig /release\nipconfig /renew",
+        "tags": [
+            "network",
+            "dns"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Password Reset (Copy)",
+        "content": "Hi ____,\n\nYour password has been reset.\n    \n    ",
+        "tags": [
+            "account",
+            "user",
+            "password"
+        ]
+    }
+]
