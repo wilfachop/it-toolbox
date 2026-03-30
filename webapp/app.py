@@ -10,6 +10,9 @@ def home():
 
     return render_template("index.html", snippets=snippets)
 
+@app.route("/tools")
+def tools():
+    return render_template("tools.html")
 
 
 # update JSON file 
