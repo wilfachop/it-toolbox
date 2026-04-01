@@ -248,6 +248,9 @@ function deleteSnippet(btn) {
 
 // Duplicate function
 function duplicateSnippet(btn) {
+    const confirmed = confirm("Are you sure you want to duplicate this snippet?");
+    if (!confirmed) return;
+
     const card = btn.closest(".card");
     const textarea = card.querySelector("textarea");
 
