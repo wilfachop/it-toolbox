@@ -5,14 +5,24 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
+    return render_template("index.html")
+
+@app.route("/snippets")
+def snippets():
     with open("snippets.json") as f:
         snippets = json.load(f)
 
-    return render_template("index.html", snippets=snippets)
+    return render_template("snippets.html", snippets=snippets)
 
 @app.route("/tools")
 def tools():
     return render_template("tools.html")
+
+@app.route("/tools/password")
+def password_tool():
+    return render_template("password.html")
+
+
 
 
 # update JSON file 

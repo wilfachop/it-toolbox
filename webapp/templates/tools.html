@@ -1,2 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tools</title>
+</head>
+
+{% extends "base.html" %}
+{% block content %}
+
 <h1>Tools Page</h1>
-<a href="/">Back</a>
+
+{% include "tools/password.html" %}
+<script src="{{ url_for('static', filename='password.js') }}"></script>
+
+
+
+{% endblock %}
+
+</html>

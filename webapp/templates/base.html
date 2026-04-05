@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IT Toolbox</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('snippets') }}">Snippets</a>
+    <a href="{{ url_for('tools') }}">Tools</a>
+</div>
+
+<hr>
+
+<!-- PAGE CONTENT GOES HERE -->
+{% block content %}{% endblock %}
+
+</body>
+</html>
