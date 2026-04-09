@@ -273,3 +273,24 @@ function duplicateSnippet(btn) {
         location.reload();
     });
 }
+
+// Add function
+function createSnippet(btn) {
+    
+    fetch("/create-snippet", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            title: "New Snippet",
+            content: "",
+            tags: []
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        location.reload();
+    });
+    
+}

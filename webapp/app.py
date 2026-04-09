@@ -108,7 +108,31 @@ def duplicate_snippet():
 
     return jsonify({"status": "success"})
 
+@app.route("/create-snippet", methods={"POST"})
+def create_snippet():
+    data=request.get_json()
 
+    with open("snippets.json", "r") as f:
+        snippets = json.load(f)
+
+        # Generate new id
+        if snippets:
+            new_id = max(s["id"] for s in snippets) +1
+        else:
+            new_id = 1
+
+        new_snippet = {
+            "id": new_id,
+            "title": data.get("title", "New Snippet"),
+            "content": data.get("content", ""),
+            "tags": data.get("tags", [])
+        }
+
+        snippets.append(new_snippet)
+
+        with open("snippets.json", "w") as f:
+            json.dump(snippets, f, indent = 4)
+        return jsonify({"status": "success"})
 
 
 
